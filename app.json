@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "budget-planner-2.0",
-    "slug": "budget-planner-2.0",
+    "name": "Budget-Planner-App",
+    "slug": "Budget-Planner-App",
     "version": "1.0.0",
-    "scheme": "budget-planner-schema",
+    "scheme": "budget-planner-scheme",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -22,14 +22,30 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.uddeshyac9.BudgetPlannerApp",
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "web": {
+      "bundler": "metro",
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-router",
-      "expo-font"
-    ]
+      "@react-native-google-signin/google-signin",
+      "expo-secure-store",
+      "expo-font",
+      "expo-image-picker"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "3801a913-c4c1-404f-8483-99564d2a20fb"
+      }
+    }
   }
 }
